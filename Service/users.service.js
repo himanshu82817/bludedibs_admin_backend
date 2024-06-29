@@ -647,14 +647,12 @@ exports.getRegistrationsByRange = async (range) => {
       case "thisMonth":
         startDate = new Date(now.getFullYear(), now.getMonth(), 1);
         endDate = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-        console.log("Start Date: ", startDate);
-        console.log("End Date: ", endDate);
+
         break;
       case "thisYear":
         startDate = new Date(now.getFullYear(), 0, 1);
         endDate = new Date(now.getFullYear() + 1, 0, 1);
-        console.log("Year Start Date: ", startDate);
-        console.log("Year End Date: ", endDate);
+
         break;
       default:
         throw new Error("Invalid range");
